@@ -1,0 +1,21 @@
+name: Deploy WordPress Theme
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH Deploy
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /home/xavier/wordpress/theyCallmeGordon
+            git pull
+            docker compose -f /home/xavier/wordpress/docker-compose.yml restart wordpress
