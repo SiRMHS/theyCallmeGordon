@@ -1,7 +1,4 @@
 <?php
-/**
- * Main template file - basic loop
- */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
