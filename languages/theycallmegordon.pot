@@ -1,0 +1,2 @@
+# POT file placeholder for translations
+# Run xgettext or use Poedit to generate real POT from PHP files.

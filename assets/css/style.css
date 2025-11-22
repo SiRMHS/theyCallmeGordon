@@ -1,0 +1,9 @@
+/* Theme CSS placeholder
+   Tailwind is loaded via CDN for quick development.
+   This file can be used for small custom overrides or to be replaced by a built CSS file.
+*/
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Example custom utility */
+.site-header { z-index: 50; }
