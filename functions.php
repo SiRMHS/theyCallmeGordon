@@ -45,6 +45,68 @@ function tcg_woocommerce_wrapper_start() {
 function tcg_woocommerce_wrapper_end() {
     echo '</main>';
 }
+// ===============================
+// Vertical Swiper Shortcode
+// ===============================
+function vertical_swiper_shortcode() {
+    wp_enqueue_style('my-swiper-style', get_stylesheet_directory_uri() . '/assets/css/swiper-style1.css', array(), null);
+    wp_enqueue_script('my-swiper-init', get_stylesheet_directory_uri() . '/assets/js/swiper1.js', array('swiper'), null, true);
+
+    ob_start(); ?>
+    <div class="my-swiper-container">
+        <div class="nav-controls">
+            <div class="nav-title">مزایای طراحی رابط کاربری و تجربه کاربری حرفه ای</div>
+            <div class="btns-wrapper">
+                <div class="btn-circle swiper-button-prev">
+                    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 15l6-6 6 6"></path>
+                    </svg>
+                </div>
+                <div class="btn-circle swiper-button-next">
+                    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="slide-header">
+                            <svg viewBox="0 0 24 24"> <use xlink:href="/assets/svg/Capa_1.svg"></use></svg>
+                            <span>افزایش رضایت کاربران</span>
+                        </div>
+                        <div class="slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="slide-header">
+                            <svg viewBox="0 0 24 24"> <use xlink:href="/assets/svg/Capa_1.svg"></use></svg>
+                            <span>افزایش اعتبار محصول</span>
+                        </div>
+                            <div class="slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="slide-header">
+                            <svg viewBox="0 0 24 24"> <use xlink:href="/assets/svg/Capa_1.svg"></use></svg>
+                            <span>کاهش نرخ ریزش</span>
+                        </div>
+                    <div class="slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode('vertical_swiper', 'vertical_swiper_shortcode');
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 add_action( 'woocommerce_before_main_content', 'tcg_woocommerce_wrapper_start', 10 );
