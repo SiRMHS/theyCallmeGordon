@@ -1,0 +1,18 @@
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.track {
+    stroke: #f8f8f8;
+    stroke-width: 2.3;
+    fill: none;
+}
+.light-beam {
+    stroke: #ee5b7c;
+    stroke-width: 4;
+    fill: none;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 5px #00ff00) drop-shadow(0 0 10px #ee5b7c);
+    opacity: 0;
+}
