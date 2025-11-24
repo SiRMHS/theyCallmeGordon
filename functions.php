@@ -1,5 +1,17 @@
 <?php
 // functions.php — enqueue CDN assets, register supports for Elementor & WooCommerce
+add_theme_support('elementor');
+add_theme_support('post-thumbnails');
+add_theme_support('title-tag');
+function add_tailwind_cdn() {
+    wp_enqueue_script(
+        'tailwind-cdn',
+        'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4',
+        array(),
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'add_tailwind_cdn');
 
 if ( ! function_exists( 'tcg_setup_theme' ) ) {
     function tcg_setup_theme() {
