@@ -96,9 +96,7 @@ function tcg_woocommerce_wrapper_end()
 {
     echo "</main>";
 }
-// ===============================
-// Vertical Swiper Shortcode
-// ===============================
+
 function vertical_swiper_shortcode()
 {
     wp_enqueue_style(
@@ -221,6 +219,84 @@ function info_mobail()
     </div>
     <?php return ob_get_clean();
 }
+function project_swiper_shortcode()
+{
+    wp_enqueue_style(
+        "info_mobail",
+        get_stylesheet_directory_uri() . "/assets/css/project_swiper.css",
+        [],
+        null,
+    );
+    wp_enqueue_script(
+        "my-swiper-init",
+        get_stylesheet_directory_uri() . "/assets/js/project_swiper.js",
+        ["swiper"],
+        null,
+        true,
+    );
+    ob_start();
+    ?>
+    <div class="wrap">
+
+        <div class="nav-top" role="tablist" aria-label="navigation">
+
+            <button class="nav-btn" id="prevBtn" aria-label="قبلی">‹</button>
+            <button class="nav-btn" id="nextBtn" aria-label="بعدی">›</button>
+        </div>
+
+        <div class="swiper" aria-live="off">
+            <div class="swiper-wrapper">
+                <!-- اسلاید 1 -->
+                <div class="swiper-slide">
+                    <div class="chip-row">
+                        <div class="chip">
+تحقیق و تحلیل
+                        </div>
+                        <div class="icon-chip">
+                            <img src="assets/svg/icon1.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div class="desc">
+در این مرحله هدف، شناخت دقیق کاربران نهایی، نیازها، رفتارها و اهداف اون‌هاست. داده‌ها از طریق مصاحبه، نظرسنجی، و تحلیل رقبا جمع‌آوری می‌شن تا مسیر طراحی دقیق‌تر و هدفمندتر پیش بره.
+                    </div>
+                    <img src="assets/img/pic1.jpg" class="card-image" alt="" />
+                </div>
+
+                <!-- اسلاید 2 -->
+                <div class="swiper-slide">
+                    <div class="chip-row">
+                        <div class="chip">طراحی وایرفریم و ساختار</div>
+                        <div class="icon-chip">
+                            <img src="assets/svg/icon2.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div class="desc">
+                        در این بخش، ساختار کلی صفحات، چیدمان عناصر و جریان کاربر در محصول مشخص می‌شن. تمرکز اصلی بر سادگی، مسیر دسترسی و سازماندهی اطلاعاته تا کاربر تجربه روانی از تعامل با محصول داشته باشه.
+                    </div>
+                    <img src="assets/img/pic2.jpg" class="card-image" alt="" />
+                </div>
+
+                <!-- اسلاید 3 -->
+                <div class="swiper-slide">
+                    <div class="chip-row">
+                        <div class="chip">تحقیق و تحلیل</div>
+                        <div class="icon-chip">
+                            <img src="assets/svg/icon3.svg" alt="icon" />
+                        </div>
+                    </div>
+                    <div class="desc">
+در این مرحله هدف، شناخت دقیق کاربران نهایی، نیازها، رفتارها و اهداف اون‌هاست. داده‌ها از طریق مصاحبه، نظرسنجی، و تحلیل رقبا جمع‌آوری می‌شن تا مسیر طراحی دقیق‌تر و هدفمندتر پیش بره.
+                    </div>
+                    <img src="assets/img/pic3.jpg" class="card-image" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php return ob_get_clean();
+}
+add_shortcode("project_swiper", "project_swiper_shortcode");
 add_shortcode("hero_bg", "hero_bg");
 add_shortcode("info_destop", "info_destop");
 add_shortcode("info_mobail", "info_mobail");
