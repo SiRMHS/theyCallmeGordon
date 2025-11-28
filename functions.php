@@ -125,61 +125,54 @@ function vertical_swiper_shortcode()
 
     ob_start();
     ?>
-    <div class="my-swiper-container">
+    <div class="my-swiper-unique-container">
+        <div class="my-swiper-unique-nav-controls">
+            <div class="my-swiper-unique-nav-title">مزایای طراحی رابط کاربری و تجربه کاربری حرفه ای</div>
+            <div class="my-swiper-unique-btns-wrapper">
+                <div class="my-swiper-unique-btn-circle swiper-button-prev">
+                    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 15l6-6 6 6"></path>
+                    </svg>
+                </div>
+                <div class="my-swiper-unique-btn-circle swiper-button-next">
+                    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
 
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="slide-content">
-                        <div class="slide-header">
+        <div class="my-swiper-unique-swiper">
+            <div class="my-swiper-unique-wrapper">
+                <div class="my-swiper-unique-slide">
+                    <div class="my-swiper-unique-slide-content">
+                        <div class="my-swiper-unique-slide-header">
                             <svg viewBox="0 0 24 24"> <use xlink:href="/assets/svg/Capa_1.svg"></use></svg>
                             <span>افزایش رضایت کاربران</span>
                         </div>
-                        <div class="slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
+                        <div class="my-swiper-unique-slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slide-content">
-                        <div class="slide-header">
+                <div class="my-swiper-unique-slide">
+                    <div class="my-swiper-unique-slide-content">
+                        <div class="my-swiper-unique-slide-header">
                             <svg viewBox="0 0 24 24"> <use xlink:href="/assets/svg/Capa_1.svg"></use></svg>
                             <span>افزایش اعتبار محصول</span>
                         </div>
-                            <div class="slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
+                        <div class="my-swiper-unique-slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slide-content">
-                        <div class="slide-header">
+                <div class="my-swiper-unique-slide">
+                    <div class="my-swiper-unique-slide-content">
+                        <div class="my-swiper-unique-slide-header">
                             <svg viewBox="0 0 24 24"> <use xlink:href="/assets/svg/Capa_1.svg"></use></svg>
                             <span>کاهش نرخ ریزش</span>
                         </div>
-                    <div class="slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
+                        <div class="my-swiper-unique-slide-caption"><p>افزایش رضایت کاربران، کلید موفقیت در دنیای دیجیتال است. با ایجاد تجربه کاربری مناسب و ارائه محتوای مرتبط، می‌توانیم وفاداری مشتریان را جلب کرده و از طریق نظرات مثبت، مشتریان جدیدی جذب کنیم.</p></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <?php return ob_get_clean();
-}
-function hero_bg()
-{
-    wp_enqueue_style(
-        "hero_bg",
-        get_stylesheet_directory_uri() . "/assets/css/herosvg.css",
-        [],
-        null,
-    );
-    wp_enqueue_script(
-        "hero_bg",
-        get_stylesheet_directory_uri() . "/assets/js/hero.js",
-        [],
-        null,
-        true,
-    );
-    ob_start();
-    ?>
-    <div class="hero-bg">
-        <svg viewBox="0 0 24 24"> <use xlink:href="/assets/svg/hero.svg"></use></svg>
     </div>
     <?php return ob_get_clean();
 }
