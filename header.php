@@ -1,1 +1,6 @@
-<?php echo do_shortcode('[elementor-template id="10"]'); ?>
+<?php
+while (have_posts()):
+    the_post();
+    the_content();
+endwhile;
+?>

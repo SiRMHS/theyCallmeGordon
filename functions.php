@@ -1,8 +1,18 @@
 <?php
 // functions.php — enqueue CDN assets, register supports for Elementor & WooCommerce
-add_theme_support("elementor");
 add_theme_support("post-thumbnails");
 add_theme_support("title-tag");
+function mytheme_elementor_support()
+{
+    add_theme_support("elementor", [
+        "wp-page-templates" => true,
+        "post-thumbnails" => true,
+    ]);
+    add_post_type_support("page", "elementor");
+    add_post_type_support("post", "elementor");
+}
+add_action("after_setup_theme", "mytheme_elementor_support");
+
 if (!function_exists("tcg_setup_theme")) {
     function tcg_setup_theme()
     {
