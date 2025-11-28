@@ -116,21 +116,6 @@ function vertical_swiper_shortcode()
     ob_start();
     ?>
     <div class="my-swiper-container">
-        <div class="nav-controls">
-            <div class="nav-title">مزایای طراحی رابط کاربری و تجربه کاربری حرفه ای</div>
-            <div class="btns-wrapper">
-                <div class="btn-circle swiper-button-prev">
-                    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M6 15l6-6 6 6"></path>
-                    </svg>
-                </div>
-                <div class="btn-circle swiper-button-next">
-                    <svg fill="none" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                </div>
-            </div>
-        </div>
 
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -238,11 +223,6 @@ function project_swiper_shortcode()
     ?>
     <div class="wrap">
 
-        <div class="nav-top" role="tablist" aria-label="navigation">
-
-            <button class="nav-btn" id="prevBtn" aria-label="قبلی">‹</button>
-            <button class="nav-btn" id="nextBtn" aria-label="بعدی">›</button>
-        </div>
 
         <div class="swiper" aria-live="off">
             <div class="swiper-wrapper">
