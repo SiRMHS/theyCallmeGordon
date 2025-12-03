@@ -1,8 +1,8 @@
-.my-swiper-unique-container {
+my-swiper-container {
     position: relative;
 }
 
-.my-swiper-unique-nav-controls {
+.nav-controls {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -13,13 +13,13 @@
     z-index: 10;
 }
 
-.my-swiper-unique-btns-wrapper {
+.btns-wrapper {
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-.my-swiper-unique-btn-circle {
+.btn-circle {
     width: 36px;
     height: 36px;
     border-radius: 8px;
@@ -32,24 +32,24 @@
     background: #fff;
 }
 
-.my-swiper-unique-btn-circle:hover {
+.btn-circle:hover {
     transform: scale(1.1);
     border-color: #999;
 }
 
-.my-swiper-unique-btn-circle svg {
+.btn-circle svg {
     width: 18px;
     height: 18px;
     stroke: #333;
 }
 
-.my-swiper-unique-nav-title {
+.nav-title {
     color: #333;
     font-size: 17px;
     font-weight: bold;
 }
 
-.my-swiper-unique-swiper {
+.swiper {
     width: 100%;
     height: 500px;
     margin-top: 20px;
@@ -57,11 +57,11 @@
     background: transparent;
 }
 
-.my-swiper-unique-wrapper {
+.swiper-wrapper {
     gap: 4px !important;
 }
 
-.my-swiper-unique-slide {
+.swiper-slide {
     width: 400px;
     height: 60px;
     border-radius: 20px;
@@ -79,13 +79,13 @@
     opacity: 0.3;
 }
 
-.my-swiper-unique-slide-active {
+.swiper-slide-active {
     height: 180px !important;
     box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
     opacity: 1;
 }
 
-.my-swiper-unique-slide::after {
+.swiper-slide::after {
     content: "";
     position: absolute;
     top: -20px;
@@ -104,17 +104,17 @@
     transition: opacity 0.35s ease;
 }
 
-.my-swiper-unique-slide-active::after {
+.swiper-slide-active::after {
     opacity: 0;
 }
 
-.my-swiper-unique-slide-content {
+.slide-content {
     width: 100%;
     padding: 20px 26px;
     box-sizing: border-box;
 }
 
-.my-swiper-unique-slide-header {
+.slide-header {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -123,12 +123,12 @@
     white-space: nowrap;
 }
 
-.my-swiper-unique-slide-header svg {
+.slide-header svg {
     width: 20px;
     height: 20px;
 }
 
-.my-swiper-unique-slide-caption {
+.slide-caption {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.7;
@@ -139,7 +139,7 @@
     transition: all 0.35s ease;
 }
 
-.my-swiper-unique-slide-active .my-swiper-unique-slide-caption {
+.swiper-slide-active .slide-caption {
     max-height: 80px;
     opacity: 1;
 }
